@@ -21,14 +21,6 @@ We encourage you to put all the *Presentational Components* in the `components` 
 
 - Use the React CLI to set-up the client folder, running `create-react-app client`.
 
-- To allow our linter setup work, go into the client folder (`cd client`), open the package.json file with an editor, and remove the following part of code:
-
-```json
-  "eslintConfig": {  
-    "extends": "react-app"
-  }
-```
-
 - Add Redux to your app.
 
 - Your app should allow users to do the following:

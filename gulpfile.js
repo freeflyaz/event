@@ -7,7 +7,6 @@ const $ = require('gulp-load-plugins')();
 // when generating the glob patterns array for gulp.src()
 function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
-    '!**/REMOVE{,/**}',
     '!node_modules{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
@@ -25,16 +24,17 @@ gulp.task('lint', function () {
 });
 
 // Remove solutions from exercises
-gulp.task('remove-solutions', ['lint'], function () {
+gulp.task('remove-solutions', function () {
   del.sync('dist');
-  return gulp.src(addDefSrcIgnore(['**']), {dot: true})
+  return gulp.src(addDefSrcIgnore(['**', '!**/REMOVE{,/**}']), {dot: true})
     .pipe($.replace(/^\s*(\/\/|<!--|\/\*)\s*REMOVE-START[\s\S]*?REMOVE-END\s*(\*\/|-->)?\s*$/gm, ''))
     .pipe(gulp.dest('dist'));
 });
 
 // Prepare for distribution to students
-gulp.task('dist', ['remove-solutions'], function () {
+gulp.task('dist', ['lint', 'remove-solutions'], function () {
   let npmConfig = require('./package.json');
+  delete npmConfig.scripts.install;
   npmConfig = JSON.stringify(npmConfig, null, 2).replace(/-master/g, '');
   fs.writeFileSync('dist/package.json', npmConfig);
 });

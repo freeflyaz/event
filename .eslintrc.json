@@ -17,11 +17,11 @@
   },
   "plugins": ["react", "json"],
   "settings": {
-      "react": {
-        "pragma": "React",
-        "version": "^16.6.3"
-      }
-    },
+    "react": {
+      "pragma": "React",
+      "version": "^16.6.3"
+    }
+  },
   "rules": {
     "indent": ["error", 2],
     "keyword-spacing": "error",
