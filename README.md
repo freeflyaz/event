@@ -20,11 +20,7 @@ The provided Back End is shared between everyone, so expect some events that you
 We encourage you to put all the *Presentational Components* in the `components` folder and the *Container Components* in the `containers` folder.
 
 - Use the React CLI to set-up the client folder, running `create-react-app client`.
-
-- Add Redux to your app.
-
 - Your app should allow users to do the following:
-
   - View a list of the upcoming events.
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
 
@@ -65,5 +61,6 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
 
 ## Extra credits
 
+- Manage the global state with `React.Context`
 - Show a loader (e.g. spinner) when fetching the event list.
-- Display an error when the POST request for a new event fails.
+- Create an `ApiClient` service as a JavaScript Module that shares the logic for calling `fetch` and abstracts it behind methods (i.e.: `apiClient.getMessages()`).
