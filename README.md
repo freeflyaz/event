@@ -23,6 +23,7 @@ We encourage you to put all the *Presentational Components* in the `components` 
 - Your app should allow users to do the following:
   - View a list of the upcoming events.
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
+- Manage the global state with `React.Context`.
 
 ![wireframe](readme-images/wireframe.png)
 
@@ -61,6 +62,5 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
 
 ## Extra credits
 
-- Manage the global state with `React.Context`
 - Show a loader (e.g. spinner) when fetching the event list.
 - Create an `ApiClient` service as a JavaScript Module that shares the logic for calling `fetch` and abstracts it behind methods (i.e.: `apiClient.getMessages()`).
