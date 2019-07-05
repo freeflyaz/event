@@ -27,6 +27,17 @@ We encourage you to put all the *Presentational Components* in the `components` 
 
 ![wireframe](readme-images/wireframe.png)
 
+### Specks
+
+- On the form:
+  - Title's input should contain the attribute name, set to `title`.
+  - Venue's input should contain the attribute name, set to `venue`.
+  - Datetime's input should contain the attribute name (set to `date`) and the attribute type (set to `datetime-local`).
+  - The form should contain a `type=submit` input/button that should trigger the submission of the form.
+- On the list of events:
+  - The container list should have `id=list`.
+  - It should contain all the events, but the first one should render differently, containing the sentence "Next Event".
+
 ## Back End
 
 Substitute the provided back-end with your own implementation.
@@ -64,3 +75,13 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
 
 - Show a loader (e.g. spinner) when fetching the event list.
 - Create an `ApiClient` service as a JavaScript Module that shares the logic for calling `fetch` and abstracts it behind methods (i.e.: `apiClient.getMessages()`).
+
+## 👩‍🔬 Experimental
+
+For the first time in the history of weekly assessments, we're testing your submissions with Cypress (end-to-end testing)! This is completely optional, so focus first on completing the requirements, don't worry if the tests don't pass.
+
+You have two different options for running the test locally:
+
+- `npm t`: This one will run the Cypress test runner only. That means that your client and server should be up and running (listening to 3000 and 3001 respectively). Also, the database should be up and listening.
+
+- `npm run test:open`: This option is the same as the previous one, but it opens cypress' browser so you can see what it does. So cool.

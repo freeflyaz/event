@@ -11,41 +11,46 @@ function addDefSrcIgnore (srcArr) {
     '!private{,/**}',
     '!dist{,/**}',
     '!.git{,/**}',
-    '!**/.DS_Store'
+    '!**/.DS_Store',
+    '!**/node_modules{,/**}'
   ]);
 }
 
 // JavaScript and JSON linter
 function lint () {
-  return gulp.src(addDefSrcIgnore(['**/*.js', '*.json']), {dot: true})
-    .pipe($.eslint({dotfiles: true}))
+  return gulp
+    .src(addDefSrcIgnore(['**/*.js', '**/*.json']), { dot: true })
+    .pipe($.eslint({ dotfiles: true }))
     .pipe($.eslint.format())
     .pipe($.eslint.failAfterError());
-};
+}
 
 // Remove solutions from exercises
 function removeSolutions () {
   del.sync('dist');
-  return gulp.src(addDefSrcIgnore(['**', '!**/REMOVE{,/**}']), {dot: true})
-    .pipe($.replace(/^\s*(\/\/|<!--|\/\*)\s*REMOVE-START[\s\S]*?REMOVE-END\s*(\*\/|-->)?\s*$/gm, ''))
+  return gulp
+    .src(addDefSrcIgnore(['**', '!**/REMOVE{,/**}']), { dot: true })
+    .pipe(
+      $.replace(
+        /^\s*(\/\/|<!--|\/\*)\s*REMOVE-START[\s\S]*?REMOVE-END\s*(\*\/|-->)?\s*$/gm,
+        ''
+      )
+    )
     .pipe(gulp.dest('dist'));
-};
+}
 
 // Prepare for distribution to students
 function updateConfigForSlave (done) {
   let npmConfig = require('./package.json');
-  delete npmConfig.scripts.install;
+  delete npmConfig.scripts;
   npmConfig = JSON.stringify(npmConfig, null, 2).replace(/-master/g, '');
   fs.writeFileSync('dist/package.json', npmConfig);
 
-  done()
-};
+  done();
+}
 
 // Lint all files
 exports.lint = lint;
 
 // Prepare for distribution to students
-exports.dist = gulp.series(
-  removeSolutions,
-  updateConfigForSlave
-);
+exports.dist = gulp.series(removeSolutions, updateConfigForSlave);
