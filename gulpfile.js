@@ -8,6 +8,8 @@ const $ = require('gulp-load-plugins')();
 function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
     '!node_modules{,/**}',
+    '!cypress/videos{,/**}',
+    '!cypress/screenshots{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
     '!.git{,/**}',
@@ -42,8 +44,10 @@ function removeSolutions () {
 // Prepare for distribution to students
 function updateConfigForSlave (done) {
   let npmConfig = require('./package.json');
-  delete npmConfig.scripts;
-  npmConfig = JSON.stringify(npmConfig, null, 2).replace(/-master/g, '');
+  npmConfig = JSON.stringify(npmConfig, null, 2)
+    .replace(/-master/g, '')
+    .replace(/REMOVE/g, '.')
+    .replace(/\/\.\./g, '');
   fs.writeFileSync('dist/package.json', npmConfig);
 
   done();
@@ -53,4 +57,7 @@ function updateConfigForSlave (done) {
 exports.lint = lint;
 
 // Prepare for distribution to students
-exports.dist = gulp.series(removeSolutions, updateConfigForSlave);
+exports.dist = gulp.series(
+  removeSolutions,
+  updateConfigForSlave
+);
