@@ -21,13 +21,12 @@ We encourage you to put all the *Presentational Components* in the `components` 
 
 - Use the React CLI to set-up the client folder, running `create-react-app client`.
 - Your app should allow users to do the following:
-  - View a list of the upcoming events.
+  - View a list of the next upcoming events sorted by the most recent (see the wireframe).
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
-- Manage the global state with `React.Context`.
 
 ![wireframe](readme-images/wireframe.png)
 
-### Specks
+### Specks 🥓
 
 - On the form:
   - Title's input should contain the attribute name, set to `title`.
@@ -76,12 +75,12 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
 - Show a loader (e.g. spinner) when fetching the event list.
 - Create an `ApiClient` service as a JavaScript Module that shares the logic for calling `fetch` and abstracts it behind methods (i.e.: `apiClient.getMessages()`).
 
-## 👩‍🔬 Experimental
+## Experimental 👩‍🔬
 
-For the first time in the history of weekly assessments, we're testing your submissions with Cypress (end-to-end testing)! This is completely optional, so focus first on completing the requirements, don't worry if the tests don't pass.
+We're testing your submissions with Cypress (end-to-end testing)! This is completely optional, so focus first on completing the requirements, don't worry if the tests don't pass.
 
 You have two different options for running the test locally:
 
 - `npm t`: This one will run the Cypress test runner only. That means that your client and server should be up and running (listening to 3000 and 3001 respectively). Also, the database should be up and listening.
 
-- `npm run test:open`: This option is the same as the previous one, but it opens cypress' browser so you can see what it does. So cool.
+- `npm run test:open`: This option is the same as the previous one, but it opens cypress' browser so you can see what it does. So cool!

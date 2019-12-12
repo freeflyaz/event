@@ -1,6 +1,6 @@
 const { setNativeValue, findTimeout } = require('../support/helper');
 const title = 'Graduation Party';
-const date = '2019-07-12T19:30';
+const date = '2119-07-12T19:30';
 const venue = 'Codeworks';
 
 describe('Full Stack tests', () => {
