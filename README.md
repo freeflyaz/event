@@ -19,7 +19,7 @@ The provided Back End is shared between everyone, so expect some events that you
 
 We encourage you to put all the *Presentational Components* in the `components` folder and the *Container Components* in the `containers` folder.
 
-- Use the React CLI to set-up the client folder, running `create-react-app client`.
+- Use the React CLI to set-up the client folder, running `npx create-react-app client`.
 - Your app should allow users to do the following:
   - View a list of the next upcoming events sorted by the most recent (see the wireframe).
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
