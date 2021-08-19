@@ -17,8 +17,6 @@ Start by creating the Front End, in the meantime you can use the Back End we pro
 
 The provided Back End is shared between everyone, so expect some events that you don’t create to be listed. Please, be respectful of others and polite with the events you create.
 
-We encourage you to put all the *Presentational Components* in the `components` folder and the *Container Components* in the `containers` folder.
-
 - Use the React CLI to set-up the client folder, running `npx create-react-app client`.
 - Your app should allow users to do the following:
   - View a list of the next upcoming events sorted by the most recent (see the wireframe).
