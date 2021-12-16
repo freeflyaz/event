@@ -13,7 +13,7 @@ Make sure to:
 
 ## Front End
 
-Start by creating the Front End, in the meantime you can use the Back End we provide at `https://cw-events-092017.herokuapp.com/`. You can find all its documentation in the next section here below.
+Start by creating the Front End, in the meantime you can use the Back End we provide at `https://cw-events-092017.herokuapp.com/`. You can find its documentation in the [Back End](https://github.com/codeworks/weekly-assessment-6#back-end) section below.
 
 The provided Back End is shared between everyone, so expect some events that you don’t create to be listed. Please, be respectful of others and polite with the events you create.
 
@@ -24,7 +24,7 @@ The provided Back End is shared between everyone, so expect some events that you
 
 ![wireframe](readme-images/wireframe.png)
 
-### Specks 🥓
+### Specs 🥓
 
 - On the form:
   - Title's input should contain the attribute name, set to `title`.
@@ -33,11 +33,11 @@ The provided Back End is shared between everyone, so expect some events that you
   - The form should contain a `type=submit` input/button that should trigger the submission of the form.
 - On the list of events:
   - The container list should have `id=list`.
-  - It should contain all the events, but the first one should render differently, containing the sentence "Next Event".
+  - It should contain only the future events, and the first one should render differently, containing the sentence "Next Event".
 
 ## Back End
 
-Substitute the provided back-end with your own implementation.
+Substitute the provided back end with your own implementation.
 
 Create a `/server` folder and implement an [Express](https://expressjs.com/) REST server connected to a MongoDB database with [Mongoose](http://mongoosejs.com/). It should offer the following API methods:
 
@@ -47,7 +47,7 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
   - `date`: *DateTime (ISO 8601).* Date and Time of the event.
   - `venue`: *String*. Where the event is taking place.
 
-  All these parameters are mandatory. The server should return a `200` status code for success, and a `400` HTTP status code in case any parameter is missing.
+  All these parameters are mandatory. The server should return a `201` status code for success, and a `400` HTTP status code in case any parameter is missing.
 
 - `GET /events` - Returns a list of all events stored in the database, in JSON format. 
 
