@@ -21,6 +21,7 @@ The provided Back End is shared between everyone, so expect some events that you
 - Your app should allow users to do the following:
   - View a list of the next upcoming events sorted by the most recent (see the wireframe).
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
+  - When styling your application, you *must* use vanilla CSS.
 
 ![wireframe](readme-images/wireframe.png)
 
@@ -67,6 +68,8 @@ Create a `/server` folder and implement an [Express](https://expressjs.com/) RES
     }
   ]
   ```
+
+**Note:** when configuring the connection to MongoDB, it is advised to use the IP version of your local machine's address: `(127.0.0.1)` instead of `localhost`.
 
 ## Extra credits
 
