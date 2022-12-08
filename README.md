@@ -13,7 +13,7 @@ Make sure to:
 
 ## Front End
 
-Start by creating the Front End, in the meantime you can use the Back End we provide at `https://cw-events-092017.herokuapp.com/`. You can find its documentation in the [Back End](https://github.com/codeworks/weekly-assessment-6#back-end) section below.
+Start by creating the Front End, in the meantime you can use the Back End we provide at `https://cw-api.fly.dev/assessment`. You can find its documentation in the [Back End](https://github.com/codeworks/weekly-assessment-6#back-end) section below.
 
 The provided Back End is shared between everyone, so expect some events that you don’t create to be listed. Please, be respectful of others and polite with the events you create.
 
