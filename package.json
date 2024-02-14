@@ -1,12 +1,12 @@
 {
   "name": "codeworks-weekly-assessment-6",
-  "version": "1.1.10",
+  "version": "1.2.0",
   "description": "A Codeworks exercise to train students",
   "main": "index.js",
   "scripts": {
     "install": "cd ./client && npm i . && cd ../server && npm i .",
     "start:server": "node ./server",
-    "start:client": "cd ./client && BROWSER=none npm start && cd ..",
+    "start:client": "cd ./client && npm run dev -- --port 3000 && cd ..",
     "start:server-client": "start-test start:server 3001/events start:client",
     "test": "cypress run",
     "test:open": "cypress open",
@@ -49,9 +49,6 @@
     "commitizen": {
       "path": "./node_modules/cz-changelog"
     }
-  },
-  "dependencies": {
-    "react": "^17.0.2"
   },
   "husky": {
     "hooks": {

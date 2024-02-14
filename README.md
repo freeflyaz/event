@@ -17,7 +17,7 @@ Start by creating the Front End, in the meantime you can use the Back End we pro
 
 The provided Back End is shared between everyone, so expect some events that you don’t create to be listed. Please, be respectful of others and polite with the events you create.
 
-- Use the React CLI to set-up the client folder, running `npx create-react-app client`.
+- Use Vite to set-up the app in a client folder, running `npx create vite@latest client` in your terminal.
 - Your app should allow users to do the following:
   - View a list of the next upcoming events sorted by the most recent (see the wireframe).
   - Add a new event. When a new event is added, the event list should reflect the changes automatically and the form fields should be cleaned.
@@ -82,6 +82,6 @@ We're testing your submissions with Cypress (end-to-end testing)! This is comple
 
 You have two different options for running the test locally:
 
-- `npm t`: This one will run the Cypress test runner only. That means that your client and server should be up and running (listening to 3000 and 3001 respectively). Also, the database should be up and listening.
+- `npm t`: This one will run the Cypress test runner only. That means that your client and server should be up and running. They should be listening to port 3000 (client, you can determine the port in your start command, i.e. 'npm run dev -- --port 3000') and 3001 (server). Also, the database should be up and listening.
 
 - `npm run test:open`: This option is the same as the previous one, but it opens cypress' browser so you can see what it does. So cool!
