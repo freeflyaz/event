@@ -64,7 +64,7 @@ function EventForm({eventList, setEventList }) {
       <label>VENUE<br></br></label>
       <input name="venue" value={venue} onChange={onVenueChangeHandler} placeholder="Insert a venue..." required />
       </div>
-      <button>Create</button>
+      <button type="submit">Create</button>
     </form>
   </div>
     )
