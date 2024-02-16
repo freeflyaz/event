@@ -13,9 +13,9 @@ function EventItem({event, style }) {
     <div className="item" style={style}>
   <div className="date-left-orange">{eventDateFormattedShort}</div>
   <div className="text">
-   <div><b>{event.title}</b></div>
-   <div>{eventDateFormatted}</div>
-   <div>{event.venue}</div>
+   <div><h2>{event.title}</h2></div>
+   <div className="date">{eventDateFormatted}</div>
+   <div className="venue">{event.venue}</div>
    </div>
 </div>
 )
