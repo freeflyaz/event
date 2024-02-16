@@ -54,5 +54,6 @@
     "hooks": {
       "pre-commit": "gulp lint"
     }
-  }
+  },
+  "keywords": []
 }
