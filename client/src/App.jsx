@@ -18,9 +18,10 @@ getEvents();
   },[]);
 
   const sortEventsByDate = (events) => {
-    return events.sort((a, b) => new Date(b.date) - new Date(a.date));
-   
+    return events.sort((a, b) => new Date(a.date) - new Date(b.date));
   };
+
+  const eventListFilter = eventList.filter(event => new Date(event.date) >= new Date())
   
 
 
@@ -28,13 +29,13 @@ getEvents();
 <div className="app">
   <div className="list" id="list">
     
-    {eventList.length && eventList.map((event, index) => ( 
+    {eventListFilter.length && eventListFilter.map((event, index) => ( 
       <EventItem  key={event._id} event={event} 
     style={index === 0 ? { backgroundColor: 'orange', color: 'white'} : {}}
     />
     ))}
   </div>
-    <EventForm setEventList={setEventList} eventList={eventList} sortEventsByDate={sortEventsByDate}/>
+    <EventForm setEventList={setEventList} eventList={eventListFilter} sortEventsByDate={sortEventsByDate}/>
 </div>
   )
 }
