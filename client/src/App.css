@@ -36,10 +36,22 @@
   gap: 20px;
   border: 1px solid #ddd; 
   border-radius: 4px;
-  padding: 20px;
+  padding: 10px;
+  max-width: 80%;
 }
 .date-left-orange {
+  display: flex;
+  align-items: center;
   background-color: #FE7B10;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: -10px;
+  max-width: 100px;
+  justify-content: center;
+  padding-left: 20px;
+  margin-right: 10px;
+
 }
 .text {
   display: flex;
@@ -96,11 +108,14 @@
 }
 
 .venue {
+  margin-top: -5px;
   color: #969696;
+  font-size: 12px;
 }
 
 .date{
   color: #969696;
+  font-size: 12px;
 }
 
 

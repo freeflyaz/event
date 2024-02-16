@@ -7,7 +7,7 @@ function EventItem({event, style }) {
   
 
   const eventDateFormatted = format(new Date(event.date), "h:mm aaa - MMMM do, yyyy")
-  const eventDateFormattedShort = format(new Date(event.date), "do MMM")
+  const eventDateFormattedShort = format(new Date(event.date), "do  MMM")
 
   return (
     <div className="item" style={style}>
