@@ -4,8 +4,8 @@ const controller = require('./controller');
 
 
 
-router.get('/', controller.getEvents);
-//router.post('/', controller.postEvents);
+router.get('/events', controller.getEvents);
+router.post('/events', controller.postEvents);
 
 
 

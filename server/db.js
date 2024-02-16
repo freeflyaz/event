@@ -23,7 +23,7 @@ const getEvents = async () => {
   return events;
 };
 
-const postEvents = async (topicData) => {
+const postEvents = async (eventData) => {
     const event = new Event(eventData);
     await event.save();
     console.log('event created:', event);

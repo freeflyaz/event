@@ -5,4 +5,10 @@ const  getEvents = async (req, res) => {
     res.send(sendBack);
   };
 
-  module.exports = {getEvents};
+  const  postEvents = async (req, res) => {
+    const eventData = req.body;
+    const event = await model.postEvents(eventData);
+    res.status(201).json(event);
+  };
+
+  module.exports = {getEvents, postEvents};
