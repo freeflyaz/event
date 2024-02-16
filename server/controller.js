@@ -1,8 +1,8 @@
 const model  = require('./model');
 
 const  getEvents = async (req, res) => {
-    
-    res.send('gabe');
+    const sendBack = await model.getEvents();
+    res.send(sendBack);
   };
 
   module.exports = {getEvents};
