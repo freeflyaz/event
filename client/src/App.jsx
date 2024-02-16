@@ -1,6 +1,5 @@
 import EventForm from './components/EventForm';
 import EventItem from './components/EventItem';
-// import EventList from './components/EventList';
 import { useEffect, useState } from 'react';
 import './App.css';
 
@@ -29,7 +28,7 @@ getEvents();
   <div className="list">
     {eventList.length && eventList.map((event, index) => ( 
     <EventItem  key={event._id} event={event} 
-    style={index === 0 ? { backgroundColor: 'orange' } : {}}
+    style={index === 0 ? { backgroundColor: 'orange', color: 'white'} : {}}
     />
     ))}
   </div>

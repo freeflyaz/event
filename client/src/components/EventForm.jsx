@@ -29,7 +29,7 @@ function EventForm({eventList, setEventList }) {
   
     if(response.ok) {
       console.log(newEvent);
-    const res = await response.json(); // created by fetch .json /// must await ///
+    const res = await response.json(); 
     console.log('here', res);
     setEventList([...eventList, res]);
     }
