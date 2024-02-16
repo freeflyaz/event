@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { format } from 'date-fns';
 import '../App.css'
 
 function EventForm({eventList, setEventList }) {
@@ -51,7 +52,7 @@ function EventForm({eventList, setEventList }) {
   return (
     <div className="form">
       <h2> Create a new event</h2>
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler} >
     <div className="input-group">
       <label>TITLE<br></br></label>
       <input name="title" value={title} onChange={onTitleChangeHandler} placeholder="Insert a title..." />

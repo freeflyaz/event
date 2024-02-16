@@ -25,7 +25,7 @@ getEvents();
 
   return (
 <div className="app">
-  <div className="list">
+  <div className="list" id="list">
     {eventList.length && eventList.map((event, index) => ( 
     <EventItem  key={event._id} event={event} 
     style={index === 0 ? { backgroundColor: 'orange', color: 'white'} : {}}
