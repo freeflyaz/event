@@ -1,5 +1,5 @@
 import EventForm from './components/EventForm';
-import EventList from './components/EventList';
+// import EventList from './components/EventList';
 import { useEffect, useState } from 'react';
 import './App.css';
 
@@ -23,8 +23,10 @@ getEvents();
 
   return (
     <div className="app">
-    <EventForm setEventList={SetEventList} eventList={eventList}/>
-    <EventList eventList={eventList} />
+    {console.log(eventList)}
+      {/* <EventForm /> */}
+    {/* <EventForm setEventList={SetEventList} eventList={eventList}/> */}
+    {/* <EventList eventList={eventList} /> */}
     </div>
   )
 }
