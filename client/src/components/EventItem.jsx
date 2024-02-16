@@ -1,10 +1,10 @@
 import '../App.css'
 
 
-function EventItem({event}) {
+function EventItem({event, style }) {
 
   return (
-<div className="item">
+    <div className="item" style={style}>
   <div className="date-left-orange">Jan 24</div>
   <div className="text">
    <div><b>{event.title}</b></div>

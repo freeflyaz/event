@@ -12,17 +12,25 @@ function App() {
     const response = await fetch("http://localhost:3000/events");
     const event = await response.json();
     console.log('from-db: ', event);
-    setEventList(event);
+    const sortedEvents = sortEventsByDate(event);
+    setEventList(sortedEvents);
   }   
 getEvents();
   },[]);
+
+  const sortEventsByDate = (events) => {
+    return events.sort((a, b) => new Date(b.date) - new Date(a.date));
+   
+  };
 
 
   return (
 <div className="app">
   <div className="list">
-    {eventList.length && eventList.map((event) => ( 
-    <EventItem  key={event._id} event={event} />
+    {eventList.length && eventList.map((event, index) => ( 
+    <EventItem  key={event._id} event={event} 
+    style={index === 0 ? { backgroundColor: 'orange' } : {}}
+    />
     ))}
   </div>
     <EventForm setEventList={setEventList} eventList={eventList}/>
