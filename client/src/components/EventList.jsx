@@ -1,3 +1,4 @@
+import EventItem from './EventItem';
 import '../App.css'
 
 
