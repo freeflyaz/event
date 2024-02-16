@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { format } from 'date-fns';
 import '../App.css'
 
 function EventForm({eventList, setEventList }) {

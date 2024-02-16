@@ -11,7 +11,7 @@ async function main () {
 const eventSchema = new mongoose.Schema({
   // _id: String,
   title: String,
-  date: String, 
+  date: Date, 
   venue: String
 });
 const Event = mongoose.model('Event', eventSchema);
