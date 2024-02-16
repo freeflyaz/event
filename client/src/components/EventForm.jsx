@@ -54,15 +54,15 @@ function EventForm({eventList, setEventList }) {
     <form onSubmit={onSubmitHandler} >
     <div className="input-group">
       <label>TITLE<br></br></label>
-      <input name="title" value={title} onChange={onTitleChangeHandler} placeholder="Insert a title..." />
+      <input name="title" value={title} onChange={onTitleChangeHandler} placeholder="Insert a title..." required />
      </div>
      <div className="input-group">
       <label>DATE<br></br></label>
-      <input name="date" type="datetime-local" value={date} onChange={onDateChangeHandler}   />
+      <input name="date" type="datetime-local" value={date} onChange={onDateChangeHandler}   required />
       </div>
       <div className="input-group">
       <label>VENUE<br></br></label>
-      <input name="venue" value={venue} onChange={onVenueChangeHandler} placeholder="Insert a venue..." />
+      <input name="venue" value={venue} onChange={onVenueChangeHandler} placeholder="Insert a venue..." required />
       </div>
       <button>Create</button>
     </form>

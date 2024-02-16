@@ -24,10 +24,10 @@ const getEvents = async () => {
 };
 
 const postEvents = async (eventData) => {
-    const event = new Event(eventData);
-    await event.save();
-    console.log('event created:', event);
-    return event; 
-  };
+  const event = new Event(eventData);
+  await event.save();
+  console.log('event created:', event);
+  return event; 
+};
 
-  module.exports = { getEvents , postEvents };
+module.exports = { getEvents , postEvents };
