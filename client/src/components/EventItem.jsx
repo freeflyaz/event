@@ -1,10 +1,14 @@
 import '../App.css'
 
 
-function EventItem() {
+function EventItem({event}) {
 
   return (
-  <div>EventItem</div>
+    <div>
+   <div>{event.title}</div>
+   <div>{event.date}</div>
+   <div>{event.venue}</div>
+   </div>
     )
   }
 

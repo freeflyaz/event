@@ -1,16 +1,22 @@
 import { useState } from 'react'
 import '../App.css'
 
-function EventForm() {
+function EventForm({eventList, setEventList }) {
   const [title, setTitle] = useState('');
   const [date, setDate] =   useState('');
   const [venue, setVenue] = useState('');
 
  async function onSubmitHandler(e) {
-    const topicData = {
-      title: topic
-    }
-    const response = await fetch('http://localhost:300/evets', {
+  e.preventDefault();
+  
+  const newEvent = {
+    title: title,
+    date: date,
+    venue: venue
+  };
+
+
+    const response = await fetch('http://localhost:3000/events', {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       credentials: "same-origin", // include, *same-origin, omit
@@ -18,14 +24,18 @@ function EventForm() {
         "Content-Type": "application/json",
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify(topicData), // body data type must match "Content-Type" header
+      body: JSON.stringify(newEvent), // body data type must match "Content-Type" header
     });
   
     if(response.ok) {
+      console.log(newEvent);
     const res = await response.json(); // created by fetch .json /// must await ///
-      setTopicList([...topicList, res]);
+    console.log('here', res);
+    setEventList([...eventList, res]);
     }
-  setTopic(''); 
+    setTitle('');
+    setDate('');
+    setVenue(''); 
   }
   
   function onTitleChangeHandler (e) {
