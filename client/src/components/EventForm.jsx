@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 
-function EventForm({eventList, setEventList }) {
+function EventForm({eventList, setEventList, sortEventsByDate }) {
   const [title, setTitle] = useState('');
   const [date, setDate] =   useState('');
   const [venue, setVenue] = useState('');
@@ -31,7 +31,7 @@ function EventForm({eventList, setEventList }) {
       console.log(newEvent);
     const res = await response.json(); 
     console.log('here', res);
-    setEventList([...eventList, res]);
+    setEventList(sortEventsByDate([...eventList, res]));
     }
     setTitle('');
     setDate('');

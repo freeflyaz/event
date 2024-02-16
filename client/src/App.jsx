@@ -21,18 +21,20 @@ getEvents();
     return events.sort((a, b) => new Date(b.date) - new Date(a.date));
    
   };
+  
 
 
   return (
 <div className="app">
   <div className="list" id="list">
+    
     {eventList.length && eventList.map((event, index) => ( 
-    <EventItem  key={event._id} event={event} 
+      <EventItem  key={event._id} event={event} 
     style={index === 0 ? { backgroundColor: 'orange', color: 'white'} : {}}
     />
     ))}
   </div>
-    <EventForm setEventList={setEventList} eventList={eventList}/>
+    <EventForm setEventList={setEventList} eventList={eventList} sortEventsByDate={sortEventsByDate}/>
 </div>
   )
 }
