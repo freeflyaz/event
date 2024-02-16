@@ -24,7 +24,7 @@ getEvents();
   return (
     <div className="app">
     {console.log(eventList)}
-      {/* <EventForm /> */}
+    <EventForm /> 
     {/* <EventForm setEventList={SetEventList} eventList={eventList}/> */}
     {/* <EventList eventList={eventList} /> */}
     </div>

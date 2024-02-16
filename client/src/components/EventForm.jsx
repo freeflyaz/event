@@ -4,8 +4,8 @@ import '../App.css'
 function EventForm() {
 
   return (
-  gabe
+  <div>EventForm</div>
     )
   }
 
-  export default EventForm
+  export default EventForm;
