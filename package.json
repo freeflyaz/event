@@ -55,5 +55,8 @@
       "pre-commit": "gulp lint"
     }
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "date-fns": "^3.3.1"
+  }
 }
