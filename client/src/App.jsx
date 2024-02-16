@@ -26,16 +26,20 @@ getEvents();
 
 
   return (
+    <div>
+  <div className="nav">
+    <h1>Codeworks eventing</h1>
+  </div>
 <div className="app">
   <div className="list" id="list">
-    
     {eventListFilter.length && eventListFilter.map((event, index) => ( 
       <EventItem  key={event._id} event={event} 
-    style={index === 0 ? { backgroundColor: 'orange', color: 'white'} : {}}
+    style={index === 0 ? { backgroundColor: '#FE7B10', color: 'white'} : {}}
     />
     ))}
   </div>
     <EventForm setEventList={setEventList} eventList={eventListFilter} sortEventsByDate={sortEventsByDate}/>
+</div>
 </div>
   )
 }

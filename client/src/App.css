@@ -6,13 +6,26 @@
   padding: 30px;
 }
 
+.nav {
+  border-bottom: 3px solid #f5f2f2; 
+  margin: 20px;
+  
+}
+
+.nav h1 {
+  font-size:24px;
+  font-weight: bold; 
+  padding-bottom: 10px;
+}
+
 .list {
-  margin-left:100px;
+  margin-left:px;
   background-color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding:20px;
+  min-width: 50%;
   
 
 }
@@ -26,7 +39,7 @@
   padding: 20px;
 }
 .date-left-orange {
-  background-color: orange;
+  background-color: #FE7B10;
 }
 .text {
   display: flex;
@@ -43,7 +56,9 @@
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px; 
-  background: white; /
+  background: white; 
+  border: 1px solid #ddd; 
+  height: 40%;
 }
 
 .form h2 {
@@ -67,7 +82,7 @@
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: orange;
+  background-color: #FE7B10;
   color: white;
   cursor: pointer;
 }
