@@ -1,20 +1,50 @@
 .app {
   display: flex;
   background-color: aqua;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: stretch;
   height: 100vh;
   padding: 30px;
 }
 
+.list {
+  margin-left:100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding:20px;
+  
+
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border: 1px solid #ddd; 
+  border-radius: 4px;
+  padding: 20px;
+}
+.date-left-orange {
+  background-color: orange;
+}
+.text {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+
+
+
 .form {
   display: flex;
   flex-direction: column;
-  width: 300px; /* Adjust width as needed */
+  width: 300px; 
   margin: 0 auto;
   padding: 20px;
-  border-radius: 8px; /* Slightly rounded corners */
-  background: white; /* Assuming a light mode form */
+  border-radius: 8px; 
+  background: white; /
 }
 
 .form h2 {
@@ -30,20 +60,20 @@
 .form input {
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ddd; /* Light grey border */
-  border-radius: 4px; /* Slightly rounded corners for the inputs */
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
 }
 
 .form button {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: orange; /* The example shows an orange button */
+  background-color: orange;
   color: white;
   cursor: pointer;
 }
 
-/* Adjust the button to look more like the design */
+
 .form button:hover {
   background-color: darkorange;
 }

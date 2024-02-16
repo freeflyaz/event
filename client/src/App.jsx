@@ -19,14 +19,14 @@ getEvents();
 
 
   return (
-    <div className="app">
+<div className="app">
+  <div className="list">
     {eventList.length && eventList.map((event) => ( 
     <EventItem  key={event._id} event={event} />
     ))}
-
+  </div>
     <EventForm setEventList={setEventList} eventList={eventList}/>
-    
-    </div>
+</div>
   )
 }
 
