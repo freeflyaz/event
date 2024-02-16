@@ -1,5 +1,6 @@
 import EventForm from './components/EventForm';
 import EventItem from './components/EventItem';
+import FirstItem from './components/FirstItem';
 import { useEffect, useState } from 'react';
 import './App.css';
 
@@ -32,10 +33,11 @@ getEvents();
   </div>
 <div className="app">
   <div className="list" id="list">
-    {eventListFilter.length && eventListFilter.map((event, index) => ( 
-      <EventItem  key={event._id} event={event} 
-    style={index === 0 ? { backgroundColor: '#FE7B10', color: 'white'} : {}}
-    />
+  {eventList.length > 0 && (
+    <FirstItem event={eventListFilter[0]} />
+  )}
+    {eventListFilter.slice(1).map((event) => ( 
+      <EventItem  key={event._id} event={event}/>
     ))}
   </div>
     <EventForm setEventList={setEventList} eventList={eventListFilter} sortEventsByDate={sortEventsByDate}/>

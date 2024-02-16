@@ -118,6 +118,46 @@
   font-size: 12px;
 }
 
+.first-item {
+ display: flex;
+ flex-direction: column;
+ background-color: #FE7B10;
+ color: #fff;
+ padding: 20px
+
+}
+
+.next {
+  font-size: 12px;
+}
+
+.event-info {
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+
+}
+
+.first-date-top {
+  font-size: 28px; 
+  font-weight: bold;
+  
+}
+
+.event-info-h2 {
+ font-size: 24px; 
+}
+
+
+.first-date {
+  font-size: 12px;
+  margin-top: 15px;
+}
+.first-venue {
+  font-size: 12px;
+}
+
 
 
 
