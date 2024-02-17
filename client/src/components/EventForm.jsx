@@ -16,7 +16,7 @@ function EventForm({eventList, setEventList, sortEventsByDate }) {
   };
 
 
-    const response = await fetch('http://localhost:3000/events', {
+    const response = await fetch('https://api-14yn.onrender.com/events', {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       credentials: "same-origin", // include, *same-origin, omit

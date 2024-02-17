@@ -9,7 +9,7 @@ function App() {
 
   useEffect (()=>{
   const  getEvents = async () => {
-    const response = await fetch("http://localhost:3000/events");
+    const response = await fetch("https://api-14yn.onrender.com/events");
     const event = await response.json();
     console.log('from-db: ', event);
     const sortedEvents = sortEventsByDate(event);
