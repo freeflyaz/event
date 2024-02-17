@@ -4,8 +4,8 @@ const controller = require('./controller');
 
 
 
-router.get('/events', controller.getEvents);
-router.post('/events', controller.postEvents);
+router.get('https://api-14yn.onrender.com/events', controller.getEvents);
+router.post('https://api-14yn.onrender.com/events', controller.postEvents);
 
 
 
